@@ -1,1 +1,2 @@
-# Cuaderno de aula de digitalizacion
+# Cuaderno de aula de digitalizacio
+Ir haciendo fetch y merge
