@@ -1,8 +1,9 @@
 """Números pares e impares"""
-print("Ingresa una lista de números separados por espacios:", end="")
+
+print("Ingresa una lista de números separados por espacios: ", end="")
 numbers = input("")
-numbers= numbers.split(" ")
-list= []
+numbers = numbers.split(" ")
+list = []
 for number in numbers:
     list.append(int(number))
 for number in list:
