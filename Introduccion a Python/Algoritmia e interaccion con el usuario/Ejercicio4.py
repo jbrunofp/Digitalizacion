@@ -1,11 +1,18 @@
 """"Ordenacion de palabras"""
 print("Ingresa ua frase: ", end="")
 phrase= input()
-sorted_phrase= sorted(phrase.split(), key=str.casefold)
-ordered_phrase=""
+sorted_phrase_abc= sorted(phrase.split(), key=str.casefold)
+sorted_phrase_123= sorted(phrase.split(), key=str.__len__)
+ordered_phrase_abc=""
+ordered_phrase_123=""
 
-for word in sorted_phrase:
-    ordered_phrase += word + " "
-ordered_phrase = ordered_phrase.strip()
+for word in sorted_phrase_abc:
+    ordered_phrase_abc += word + " "
+ordered_phrase_abc = ordered_phrase_abc.strip()
 
-print(f"Su frase ordenada es: {ordered_phrase}")
+for word in sorted_phrase_123:
+    ordered_phrase_123 += word + " "
+ordered_phrase_123 = ordered_phrase_123.strip()
+
+print(f"Su frase ordenada alfabeticamente es: {ordered_phrase_abc}")
+print(f"Su frase ordenada alfabeticamente es: {ordered_phrase_123}")
