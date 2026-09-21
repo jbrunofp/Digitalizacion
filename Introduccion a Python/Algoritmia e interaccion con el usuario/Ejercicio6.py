@@ -1,10 +1,27 @@
 "NUMEROS PRIMOS EN UN RANGO"
-def is_cousin (number):
-        return (number%2 or number%3 or number%5 or number%7) != 0
 
-print("Ingrese dos números: ", end = "")
+import math
+
+
+def is_cousin(number):
+    if number <= 1:
+        return False
+    if number == 2:
+        return True
+    if number % 2 == 0:
+        return False
+
+    limite = int(math.isqrt(number))
+
+    for i in range(3, limite + 1, 2):
+        if number % i == 0:
+            return False
+    return True
+
+
+print("Ingrese dos números: ", end="")
 first_number, second_number = list(map(int, input().split()))
 
 for number in range(first_number, second_number):
-  if is_cousin(number) : print(number) 
-        
+    if is_cousin(number):
+        print(number)
